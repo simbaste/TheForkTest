@@ -199,6 +199,7 @@
                     android:layout_marginHorizontal="20dp">
 
                     <RelativeLayout
+                        android:layout_marginVertical="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -223,6 +224,7 @@
                     </RelativeLayout>
 
                     <RelativeLayout
+                        android:layout_marginVertical="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
@@ -233,14 +235,74 @@
                             android:layout_alignParentStart="true"
                             android:layout_marginEnd="69dp"
                             android:layout_toStartOf="@+id/menu2_price_textView"
-                            android:text="Emiette de tourteau avocat et pamplemousse rose, crème mousseuse à la feuille de moutarde" />
+                            android:text="Le thon germon mariné à la bergamote caponata d'aubergines, pistou d'ail des ours" />
 
                         <TextView
                             android:id="@+id/menu2_price_textView"
                             android:layout_alignParentEnd="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="19€"
+                            android:text="21€"
+                            android:textColor="@android:color/black"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginVertical="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/menu3_textView"
+                            android:layout_width="278dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="69dp"
+                            android:layout_toStartOf="@+id/menu3_price_textView"
+                            android:text="Le thon germon mariné à la bergamote caponata d'aubergines, pistou d'ail des ours" />
+
+                        <TextView
+                            android:id="@+id/menu3_price_textView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="23€"
+                            android:textColor="@android:color/black"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginVertical="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/menu4_title_textView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"
+                            android:text="Menu du chef" />
+
+                        <TextView
+                            android:id="@+id/menu4_textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-13dp"
+                            android:layout_marginEnd="102dp"
+                            android:layout_toStartOf="@+id/menu4_price_textView"
+                            android:layout_toEndOf="@+id/menu4_title_textView"
+                            android:text=" - Seulement le midi" />
+
+                        <TextView
+                            android:id="@+id/menu4_price_textView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="45€"
                             android:textColor="@android:color/black"
                             />
 
