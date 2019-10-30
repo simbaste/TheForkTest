@@ -55,6 +55,7 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                     <TextView
+                        android:id="@+id/diaporama_textView"
                         style="@style/Widget.AppCompat.TextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -149,16 +150,103 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:layout_marginHorizontal="20dp"
+                <View
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginVertical="10dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:text="CARTE DU RESTAURANT"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="sans-serif"
+                        />
 
-                </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mis à jour le 04/07/2017"
+                        android:textSize="10sp"
+                        android:fontFamily="sans-serif" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:text="Extrait de la carte du Chef C. Barran"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/menu1_textView"
+                            android:layout_width="278dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="69dp"
+                            android:layout_toStartOf="@+id/menu1_price_textView"
+                            android:text="Emiette de tourteau avocat et pamplemousse rose, crème mousseuse à la feuille de moutarde" />
+
+                        <TextView
+                            android:id="@+id/menu1_price_textView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19€"
+                            android:textColor="@android:color/black"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/menu2_textView"
+                            android:layout_width="278dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginEnd="69dp"
+                            android:layout_toStartOf="@+id/menu2_price_textView"
+                            android:text="Emiette de tourteau avocat et pamplemousse rose, crème mousseuse à la feuille de moutarde" />
+
+                        <TextView
+                            android:id="@+id/menu2_price_textView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19€"
+                            android:textColor="@android:color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -181,14 +269,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
+    <ProgressBar
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

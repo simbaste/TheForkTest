@@ -9,12 +9,13 @@ import android.widget.ImageView
 import androidx.viewpager.widget.PagerAdapter
 import com.squareup.picasso.Picasso
 import fr.msg.simbaste.theforktest.R
+import fr.msg.simbaste.theforktest.retrofit.model.PicsDiaporama
 import kotlinx.android.synthetic.main.photo_item_layout.view.*
 
-class PhotosAdapter(private val receivedContext: Context, private val photosURLS: List<String>): PagerAdapter() {
+class PhotosAdapter(private val receivedContext: Context, private val photosURLS: List<PicsDiaporama>): PagerAdapter() {
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val photoUrl = photosURLS.get(position)
+        val photoUrl = photosURLS.get(position).x135
 
         val view = View.inflate(receivedContext, R.layout.photo_item_layout, null)
 
