@@ -20,6 +20,6 @@ data class RestaurantTags(
     val restaurantTags4: RestaurantTags4,
     @SerializedName("restaurant_tags_5")
     val restaurantTags5: RestaurantTags5,
-    @SerializedName("restaurant_tags_9")
-    val restaurantTags9: RestaurantTags9
+    @SerializedName("restaurant_tags_8")
+    val restaurantTags8: RestaurantTags8
 )

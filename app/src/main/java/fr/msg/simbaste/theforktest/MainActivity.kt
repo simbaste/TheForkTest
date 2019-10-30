@@ -13,6 +13,9 @@ import fr.msg.simbaste.theforktest.adapter.PhotosAdapter
 import fr.msg.simbaste.theforktest.retrofit.model.PicsDiaporama
 import fr.msg.simbaste.theforktest.retrofit.model.RestaurantInfos
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.main_content_layout.*
+import kotlinx.android.synthetic.main.resto_infos_layout.*
+import kotlinx.android.synthetic.main.resto_menu_infos_layout.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -103,7 +106,13 @@ class MainActivity : AppCompatActivity() {
     private fun setRestoInfos(restaurantInfos: RestaurantInfos?) {
         restaurant_name_textView.text = restaurantInfos?.data?.name
         rate_textView.text = restaurantInfos?.data?.avgRate?.toString()
-        avg_price_textView.text = restaurantInfos?.data?.cardPrice?.toString()
-        rate_number_textView.text = restaurantInfos?.data?.rateCount?.toString()
+
+        restaurantInfos?.data?.cardPrice?.let {
+            avg_price_textView.text = getString(R.string.avg_price_label, it)
+        }
+
+        restaurantInfos?.data?.rateCount?.let {
+            rate_number_textView.text = getString(R.string.rate_count_label, it)
+        }
     }
 }

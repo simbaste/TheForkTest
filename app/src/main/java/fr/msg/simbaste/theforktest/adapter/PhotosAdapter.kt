@@ -19,7 +19,8 @@ class PhotosAdapter(private val receivedContext: Context, private val photosURLS
 
         val view = View.inflate(receivedContext, R.layout.photo_item_layout, null)
 
-        Picasso.get().load(photoUrl)
+        Picasso.get().load(photoUrl).centerCrop()
+            .resize(view.measuredWidth, receivedContext.resources.getDimensionPixelSize(R.dimen.photo_default_height))
             .placeholder(R.drawable.placeholder).into(object:
             com.squareup.picasso.Target {
             override fun onBitmapFailed(e: java.lang.Exception?, errorDrawable: Drawable?) {
@@ -28,7 +29,7 @@ class PhotosAdapter(private val receivedContext: Context, private val photosURLS
 
             override fun onBitmapLoaded(bitmap: Bitmap, from: Picasso.LoadedFrom) {
                 view.photoImgview.setImageBitmap(bitmap)
-//                view.photoImgview.scaleType = ImageView.ScaleType.CENTER_CROP
+                view.photoImgview.scaleType = ImageView.ScaleType.CENTER_CROP
             }
 
             override fun onPrepareLoad(placeHolderDrawable: Drawable?) {}

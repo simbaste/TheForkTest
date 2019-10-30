@@ -3,7 +3,7 @@ package fr.msg.simbaste.theforktest.retrofit.model
 
 import com.google.gson.annotations.SerializedName
 
-data class RestaurantTags9(
+data class RestaurantTags8(
     @SerializedName("category_name")
     val categoryName: String,
     @SerializedName("category_pic")

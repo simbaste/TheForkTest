@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_content_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        layout="@layout/resto_infos_layout"
+        />
+
+    <include
+        layout="@layout/resto_menu_infos_layout"
+        />
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exigences alimentaires"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif"/>
+
+        <TextView
+            android:id="@+id/requirement_food_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text=". Plats végétariens" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/theForkGreenColor"
+        android:textSize="15sp"
+        android:layout_margin="20dp"
+        android:text="VOIR LA CARTE ET LES MENUS"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOTES &amp; AVIS"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:layout_marginHorizontal="20dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="sans-serif"
+        />
+
+    <include
+        layout="@layout/resto_rate_layout"/>
+
+
+</LinearLayout>
