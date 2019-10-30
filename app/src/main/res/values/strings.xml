@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TheForkTest</string>
     <string name="reservation_value_label">RESERVER . JUSQU\'À %1$d%</string>
+    <string name="price_label">$%,.2f€</string>
+    <string name="avg_price_label">Prix moyen %1d€</string>
+    <string name="rate_count_label">%1d avis</string>
 </resources>

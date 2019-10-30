@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import fr.msg.simbaste.theforktest.adapter.PhotosAdapter
 import fr.msg.simbaste.theforktest.retrofit.model.PicsDiaporama
+import fr.msg.simbaste.theforktest.retrofit.model.RestaurantInfos
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-        getRestaurantInfosResponse(6861)
+        getRestaurantInfosResponse(16409)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -55,6 +56,8 @@ class MainActivity : AppCompatActivity() {
                 Log.i(MainActivity::class.java.name, "restaurantInfos ==> ${restaurantInfos}")
 
                 setupPageView(restaurantInfos?.data?.picsDiaporama?: listOf<PicsDiaporama>())
+                setCardsMenu(restaurantInfos)
+                setRestoInfos(restaurantInfos)
             }
         })
     }
@@ -64,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             this,
             photosURLS
         )
-
+        tabLayout.setupWithViewPager(photosViewPager, true)
         photosViewPager.addOnPageChangeListener(object: ViewPager.OnPageChangeListener {
 
             override fun onPageScrollStateChanged(state: Int) { }
@@ -79,5 +82,28 @@ class MainActivity : AppCompatActivity() {
                 diaporama_textView.text = photosURLS.get(position).label
             }
         })
+    }
+
+    private fun setCardsMenu(restaurantInfos: RestaurantInfos?) {
+        menu1_textView.text = restaurantInfos?.data?.cardMain1
+        menu2_textView.text = restaurantInfos?.data?.cardMain2
+        menu3_textView.text = restaurantInfos?.data?.cardMain3
+
+        restaurantInfos?.data?.priceCardMain1?.let {
+            menu1_price_textView.text = getString(R.string.price_label, it)
+        }
+        restaurantInfos?.data?.priceCardMain2?.let {
+            menu2_price_textView.text = getString(R.string.price_label, it)
+        }
+        restaurantInfos?.data?.priceCardMain3?.let {
+            menu3_price_textView.text = getString(R.string.price_label, it)
+        }
+    }
+
+    private fun setRestoInfos(restaurantInfos: RestaurantInfos?) {
+        restaurant_name_textView.text = restaurantInfos?.data?.name
+        rate_textView.text = restaurantInfos?.data?.avgRate?.toString()
+        avg_price_textView.text = restaurantInfos?.data?.cardPrice?.toString()
+        rate_number_textView.text = restaurantInfos?.data?.rateCount?.toString()
     }
 }

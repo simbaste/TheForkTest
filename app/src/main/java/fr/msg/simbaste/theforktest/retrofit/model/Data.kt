@@ -16,6 +16,12 @@ data class Data(
     val cardDessert2: String,
     @SerializedName("card_dessert_3")
     val cardDessert3: String,
+    @SerializedName("price_card_main_1")
+    val priceCardMain1: Double?,
+    @SerializedName("price_card_main_2")
+    val priceCardMain2: Double?,
+    @SerializedName("price_card_main_3")
+    val priceCardMain3: Double?,
     @SerializedName("card_main_1")
     val cardMain1: String,
     @SerializedName("card_main_2")
