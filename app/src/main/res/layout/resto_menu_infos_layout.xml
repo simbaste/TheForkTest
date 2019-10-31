@@ -7,12 +7,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginHorizontal="20dp">
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CARTE DU RESTAURANT"
+            android:text="@string/restaurant_card_label"
             android:textStyle="bold"
             android:textSize="15sp"
             android:textColor="@android:color/black"
@@ -22,8 +23,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mis à jour le 04/07/2017"
-            android:textSize="10sp"
+            android:text="@string/update_date_label"
+            android:textSize="12sp"
             android:fontFamily="sans-serif" />
 
     </LinearLayout>
@@ -32,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="Extrait de la carte du Chef C. Barran"
+        android:text="@string/chef_name_card_label"
         android:textStyle="bold"
         android:textSize="15sp"
         android:textColor="@android:color/black"
@@ -42,10 +43,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginHorizontal="20dp">
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
 
         <RelativeLayout
-            android:layout_marginVertical="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -68,7 +71,8 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_marginVertical="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -91,7 +95,8 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_marginVertical="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -114,7 +119,8 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_marginVertical="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -125,7 +131,7 @@
                 android:layout_alignParentStart="true"
                 android:textStyle="bold"
                 android:fontFamily="sans-serif"
-                android:text="Menu du chef" />
+                android:text="@string/chef_card_label" />
 
             <TextView
                 android:id="@+id/menu4_textView"
@@ -135,7 +141,7 @@
                 android:layout_marginEnd="102dp"
                 android:layout_toStartOf="@+id/menu4_price_textView"
                 android:layout_toEndOf="@+id/menu4_title_textView"
-                android:text=" - Seulement le midi" />
+                android:text="@string/schedule_time_label" />
 
             <TextView
                 android:id="@+id/menu4_price_textView"

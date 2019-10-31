@@ -4,4 +4,23 @@
     <string name="price_label">$%,.2f€</string>
     <string name="avg_price_label">Prix moyen %1d€</string>
     <string name="rate_count_label">%1d avis</string>
+    <string name="erire_un_avis_label">ÉCRIRE UN AVIS</string>
+    <string name="review_label">%$1d avis</string>
+    <string name="todo">TODO</string>
+    <string name="see_all_label">VOIR TOUT</string>
+    <string name="requirement_food_label">Exigences alimentaires</string>
+    <string name="vegan_food_label">. Plats végétariens</string>
+    <string name="see_card_and_menu_label">VOIR LA CARTE ET LES MENUS</string>
+    <string name="reviews_and_notes_label"><![CDATA[NOTES & AVIS]]></string>
+    <string name="restaurant_name_label">Français . Branché</string>
+    <string name="rate_total_label">/10</string>
+    <string name="restaurant_card_label">CARTE DU RESTAURANT</string>
+    <string name="update_date_label">Mis à jour le %$1s</string>
+    <string name="chef_name_card_label">Extrait de la carte du Chef C. Barran</string>
+    <string name="chef_card_label">Menu du chef</string>
+    <string name="schedule_time_label">- Seulement le midi</string>
+    <string name="rate_value_label">9,1</string>
+    <string name="exceptional_table_label">Table exceptionelle</string>
+    <string name="total_review_label">basé sur 45 notes</string>
+    <string name="see_all_review_label">VOIR TOUS LES AVIS</string>
 </resources>

@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
-            android:text="9,1"
+            android:text="@string/rate_value_label"
             android:textSize="40sp"
             android:textStyle="bold" />
 
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="/10" />
+            android:text="@string/rate_total_label" />
 
     </LinearLayout>
 
@@ -43,7 +43,7 @@
 
         <TextView
             android:layout_gravity="center"
-            android:text="Table exceptionelle"
+            android:text="@string/exceptional_table_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -53,7 +53,7 @@
 
         <TextView
             android:layout_gravity="center"
-            android:text="basé sur 45 notes"
+            android:text="@string/total_review_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -63,7 +63,7 @@
             android:layout_marginBottom="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="VOIR TOUS LES AVIS"
+            android:text="@string/see_all_review_label"
             android:textColor="@color/theForkGreenColor"
             android:textStyle="bold"
             />

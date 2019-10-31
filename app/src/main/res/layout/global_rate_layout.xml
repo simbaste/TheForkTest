@@ -13,7 +13,7 @@
         android:layout_marginBottom="20dp"
         android:layout_gravity="bottom"
         android:background="@drawable/stroke_shape_layer"
-        android:text="ÉCRIRE UN AVIS"
+        android:text="@string/erire_un_avis_label"
         android:textStyle="bold"
         />
 
@@ -36,7 +36,7 @@
                 android:layout_width="40dp"
                 android:layout_height="20dp"
                 android:src="@drawable/tripadvisor_icon"
-                />
+                android:contentDescription="@string/todo" />
 
             <RelativeLayout
                 android:layout_width="20dp"
@@ -69,10 +69,11 @@
                 />
 
             <TextView
-                android:layout_marginHorizontal="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="14563 avis"
+                android:text="@string/review_label"
                 />
 
         </LinearLayout>
@@ -84,7 +85,7 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:text="VOIR TOUT"
+            android:text="@string/see_all_label"
             android:textColor="@color/theForkGreenColor"
             android:textStyle="bold"
             />
