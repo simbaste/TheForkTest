@@ -62,5 +62,7 @@
     <include
         layout="@layout/resto_rate_layout"/>
 
+    <include
+        layout="@layout/global_rate_layout"/>
 
 </LinearLayout>
