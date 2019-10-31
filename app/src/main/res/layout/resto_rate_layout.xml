@@ -16,7 +16,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/rate_textView"
+            android:id="@+id/rate_avg_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
@@ -52,6 +52,7 @@
             />
 
         <TextView
+            android:id="@+id/review_count_textView"
             android:layout_gravity="center"
             android:text="@string/total_review_label"
             android:layout_width="wrap_content"

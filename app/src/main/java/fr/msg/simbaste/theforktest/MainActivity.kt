@@ -10,12 +10,16 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import fr.msg.simbaste.theforktest.adapter.PhotosAdapter
+import fr.msg.simbaste.theforktest.constants.Constants
+import fr.msg.simbaste.theforktest.extension.*
 import fr.msg.simbaste.theforktest.retrofit.model.PicsDiaporama
 import fr.msg.simbaste.theforktest.retrofit.model.RestaurantInfos
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_content_layout.*
 import kotlinx.android.synthetic.main.resto_infos_layout.*
+import kotlinx.android.synthetic.main.resto_infos_layout.rate_textView
 import kotlinx.android.synthetic.main.resto_menu_infos_layout.*
+import kotlinx.android.synthetic.main.resto_rate_layout.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         viewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
-        getRestaurantInfosResponse(16409)
+        getRestaurantInfosResponse(Constants.restaurantId)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -50,9 +54,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getRestaurantInfosResponse(restaurantId: Int) {
-        progress_bar.visibility = View.VISIBLE
+        progress_bar.makeVisible()
         viewModel.getRestaurantInfosResponse(restaurantId).observe(this, Observer {
-            progress_bar.visibility = View.GONE
+            progress_bar.makeGone()
             if (it.isSuccessful) {
                 var restaurantInfos = it.body()
 
@@ -61,6 +65,7 @@ class MainActivity : AppCompatActivity() {
                 setupPageView(restaurantInfos?.data?.picsDiaporama?: listOf<PicsDiaporama>())
                 setCardsMenu(restaurantInfos)
                 setRestoInfos(restaurantInfos)
+                setReviewsAndRates(restaurantInfos)
             }
         })
     }
@@ -85,34 +90,5 @@ class MainActivity : AppCompatActivity() {
                 diaporama_textView.text = photosURLS.get(position).label
             }
         })
-    }
-
-    private fun setCardsMenu(restaurantInfos: RestaurantInfos?) {
-        menu1_textView.text = restaurantInfos?.data?.cardMain1
-        menu2_textView.text = restaurantInfos?.data?.cardMain2
-        menu3_textView.text = restaurantInfos?.data?.cardMain3
-
-        restaurantInfos?.data?.priceCardMain1?.let {
-            menu1_price_textView.text = getString(R.string.price_label, it)
-        }
-        restaurantInfos?.data?.priceCardMain2?.let {
-            menu2_price_textView.text = getString(R.string.price_label, it)
-        }
-        restaurantInfos?.data?.priceCardMain3?.let {
-            menu3_price_textView.text = getString(R.string.price_label, it)
-        }
-    }
-
-    private fun setRestoInfos(restaurantInfos: RestaurantInfos?) {
-        restaurant_name_textView.text = restaurantInfos?.data?.name
-        rate_textView.text = restaurantInfos?.data?.avgRate?.toString()
-
-        restaurantInfos?.data?.cardPrice?.let {
-            avg_price_textView.text = getString(R.string.avg_price_label, it)
-        }
-
-        restaurantInfos?.data?.rateCount?.let {
-            rate_number_textView.text = getString(R.string.rate_count_label, it)
-        }
     }
 }

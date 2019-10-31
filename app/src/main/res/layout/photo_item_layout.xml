@@ -10,7 +10,16 @@
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:src="@drawable/placeholder"
+        android:alpha="0.8"
         android:scaleType="centerCrop"/>
+
+    <ProgressBar
+        android:id="@+id/photoProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
 
 
 </RelativeLayout>
