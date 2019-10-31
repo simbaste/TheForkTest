@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">TheForkTest</string>
     <string name="reservation_value_label">RESERVER . JUSQU\'À -20%</string>
-    <string name="price_label">$%,.2f€</string>
-    <string name="fake_price_label">45€</string>
+    <string name="price_label">%,.2f€</string>
+    <string name="fake_price_label">45.00€</string>
     <string name="avg_price_label">Prix moyen %1d€</string>
     <string name="rate_count_label">%1d avis</string>
     <string name="erire_un_avis_label">ÉCRIRE UN AVIS</string>

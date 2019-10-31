@@ -127,7 +127,7 @@ data class Data(
     @SerializedName("ratings")
     val ratings: Ratings,
     @SerializedName("restaurant_tags")
-    val restaurantTags: RestaurantTags,
+    val restaurantTagsMap: Map<String, RestaurantTags>,
     @SerializedName("restaurant_uuid")
     val restaurantUuid: String,
     @SerializedName("speciality")

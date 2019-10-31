@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
                 Log.i(MainActivity::class.java.name, "restaurantInfos ==> ${restaurantInfos}")
 
-                setupPageView(restaurantInfos?.data?.picsDiaporama?: listOf<PicsDiaporama>())
+                setupPageView(restaurantInfos?.data?.picsDiaporama?: listOf())
                 setCardsMenu(restaurantInfos)
                 setRestoInfos(restaurantInfos)
                 setReviewsAndRates(restaurantInfos)

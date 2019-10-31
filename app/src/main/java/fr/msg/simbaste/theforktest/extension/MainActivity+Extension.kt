@@ -6,12 +6,14 @@ import kotlinx.android.synthetic.main.resto_infos_layout.*
 import kotlinx.android.synthetic.main.resto_menu_infos_layout.*
 import kotlinx.android.synthetic.main.resto_rate_layout.*
 import fr.msg.simbaste.theforktest.MainActivity
+import fr.msg.simbaste.theforktest.constants.Constants
 import kotlinx.android.synthetic.main.global_rate_layout.*
 
 fun MainActivity.setCardsMenu(restaurantInfos: RestaurantInfos?) {
     this.menu1_textView.text = restaurantInfos?.data?.cardMain1
     this.menu2_textView.text = restaurantInfos?.data?.cardMain2
     this.menu3_textView.text = restaurantInfos?.data?.cardMain3
+    this.update_date_textView.text = getString(R.string.update_date_label, Constants.fakeDate)
 
     restaurantInfos?.data?.priceCardMain1?.let {
         this.menu1_price_textView.text = getString(R.string.price_label, it)
